@@ -1,0 +1,22 @@
+.icon {
+    display: inline-block;
+} 
+    .icon.w16 { 
+		background-size: 16px 16px !important;
+        width: 16px;
+        height: 16px;
+        min-width: 16px; }
+		
+    .icon.w24 { 
+		background-size: 24px 24px !important;
+        width: 24px;
+        height: 24px;
+        min-width: 24px; }
+		
+	.icon.hover { 
+		cursor: pointer; 
+	}
+		
+.icon.icon-failed { background: url("icon-failed-48x48.png") no-repeat scroll 0 0px rgba(0, 0, 0, 0); }
+.icon.icon-edit { background: url("icon-edit-48x48.png") no-repeat scroll 0 0px rgba(0, 0, 0, 0); }
+.icon.icon-success { background: url("icon-success-48x48.png") no-repeat scroll 0 0px rgba(0, 0, 0, 0); }

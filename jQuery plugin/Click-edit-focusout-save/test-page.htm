@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="click-edit-focusout-save-fields.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<h1>Click-edit-focusout-save Fields jQuery plugin</h1>
+With this small jQuery plugin, you can easily add a click-edit, focusout-save behaviour to your fields. 
+<br />
+To enable this, you need to add two attributes to any element.
+<br /><br />
+The first is <i>data-special-type="click-edit-focusout-save"</i>, this triggers the plugin.
+<br />
+<b>Optional:</b> you can leave the <i>data-special-type</i> attribute and initialize any element by jQuery through <i>$("element").clickEditFocusoutSaveField(options);</i>.
+<br />
+<b>Options:</b>
+<br />{
+<ul style="list-style: none; margin-top:0px; margin-bottom: 0px;">
+<li>loadingUrl: this is the url of the loader gif</li>
+<li>failedClass: this is the class that is added to the failed icon</li>
+<li>successClass: this is the class that is added to the success icon</li>
+<li>editButtonClass: this is the class that is added to the edit button</li>
+</ul>
+}
+<br />
+<br />
+Initialization of an element will only be executed once.
+<br />
+<br />
+The second attribute that is mandatory is <i>data-click-edit-focusout-save-url="[endpoint-url]"</i>. When saving it will send the changed field content (<i>$(field).text()</i>) to the endpoint-url.
+
+<h2>Example</h2>
+
+<div data-special-type="click-edit-focusout-save" data-click-edit-focusout-save-url="https://some.endpoint.net/SaveField">Field to change</div>
+</body>
+</html>
