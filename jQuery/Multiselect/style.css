@@ -1,0 +1,13 @@
+input { width: 100%; }
+
+.ui-autocomplete-multiselect-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ui-autocomplete-multiselect-item .ui-icon-close {
+    cursor: pointer;
+}
+
+body {
+	margin-bottom: 100px;

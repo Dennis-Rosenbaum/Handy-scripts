@@ -1,0 +1,97 @@
+<html>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.autocomplete.multiselect.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+<h1>Multiselect jQuery widget</h1>
+<p>With this small jQuery widget, you can extent the autocomplete functionalities. It is possible to convert a <i>&lt;select&gt;</i> tag to a multi-autocomplete. But this can also be added to a simple <i>&lt;input&gt;</i> tag.
+</p>
+<hr />
+<h2>Example with <i>&lt;select&gt;</i></h2>
+
+<pre>&lt;div&gt;
+	&lt;select id="AutocompleteSelect"&gt;
+		&lt;option value="1"&gt;Car&lt;/option&gt;
+		&lt;option value="2"&gt;Bike&lt;/option&gt;
+		&lt;option value="3"&gt;Ferry&lt;/option&gt;
+		&lt;option value="4"&gt;Plane&lt;/option&gt;
+		&lt;option value="5"&gt;Monowheel&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;$("#AutocompleteSelect").autocomplete();&lt;/script&gt;</pre>
+<h3>Result:</h3>
+<div style="width: 250px;">
+	<select id="AutocompleteSelect">
+		<option value="1">Car</option>
+		<option value="2">Bike</option>
+		<option value="3">Ferry</option>
+		<option value="4">Plane</option>
+		<option value="5">Monowheel</option>
+	</select>
+</div>
+<p>
+	Retrieve the value by <i>$("#AutocompleteSelect").autocomplete("value");</i>. <a href="javascript:showAutocompleteSelectResult()">Show result now</a>
+</p>
+<div id="AutocompleteSelectResult"></div>
+
+<script type="text/javascript">
+	$("#AutocompleteSelect").autocomplete();	
+	
+	function showAutocompleteSelectResult() {
+		var result = $("#AutocompleteSelect").autocomplete("value");
+		$("#AutocompleteSelectResult").html(`Result is: ${result}`);
+	}
+</script>
+
+<hr />
+
+<h2>Example with <i>&lt;input&gt;</i></h2>
+
+<pre>&lt;input id="AutocompleteInput"&gt;
+
+&lt;script type="text/javascript"&gt;
+	$("#AutocompleteInput").autocomplete({
+		multiselect: true,
+		source: [ 
+			{ value: "1", label: "Car" }, 
+			{ value: "2", label: "Bike" }, 
+			{ value: "3", label: "Ferry" }, 
+			{ value: "4", label: "Plane" }, 
+			{ value: "5", label: "Monowheel" }
+		]			
+	});
+&lt;/script&gt;</pre>
+<h3>Result:</h3>
+<div style="width: 250px;">
+	<input id="AutocompleteInput">
+</div>
+<p>
+	Retrieve the value by <i>$("#AutocompleteInput").autocomplete("value");</i>. <a href="javascript:showAutocompleteInputResult()">Show result now</a>
+</p>
+<div id="AutocompleteInputResult"></div>
+<script type="text/javascript">
+	$("#AutocompleteInput").autocomplete({
+		multiselect: true,
+		source: [ 
+			{ value: "1", label: "Car" }, 
+			{ value: "2", label: "Bike" }, 
+			{ value: "3", label: "Ferry" }, 
+			{ value: "4", label: "Plane" }, 
+			{ value: "5", label: "Monowheel" }
+		]
+	});
+	
+	function showAutocompleteInputResult() {
+		var result = $("#AutocompleteInput").autocomplete("value");
+		$("#AutocompleteInputResult").html(`Result is: ${result}`);
+	}
+</script>
+</body>
+</html>

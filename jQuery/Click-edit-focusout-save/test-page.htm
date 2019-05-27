@@ -6,13 +6,15 @@
 </head>
 <body>
 <h1>Click-edit-focusout-save Fields jQuery plugin</h1>
-With this small jQuery plugin, you can easily add a click-edit, focusout-save behaviour to your fields. 
-<br />
-To enable this, you need to add two attributes to any element.
-<br /><br />
-The first is <i>data-special-type="click-edit-focusout-save"</i>, this triggers the plugin.
-<br />
-<b>Optional:</b> you can leave the <i>data-special-type</i> attribute and initialize any element by jQuery through <i>$("element").clickEditFocusoutSaveField(options);</i>.
+<p>
+	With this small jQuery plugin, you can easily add a click-edit, focusout-save behaviour to your fields. 
+	<br />
+	To enable this, you need to add two attributes to any element.
+</p>
+<p>
+	The first is <i>data-special-type="click-edit-focusout-save"</i>, this triggers the plugin.
+	<br />
+	<b>Optional:</b> you can leave the <i>data-special-type</i> attribute and initialize any element by jQuery through <i>$("element").clickEditFocusoutSaveField(options);</i>.
 <br />
 <b>Options:</b>
 <br />{
@@ -23,15 +25,20 @@ The first is <i>data-special-type="click-edit-focusout-save"</i>, this triggers 
 <li>editButtonClass: this is the class that is added to the edit button</li>
 </ul>
 }
-<br />
-<br />
-Initialization of an element will only be executed once.
-<br />
-<br />
-The second attribute that is mandatory is <i>data-click-edit-focusout-save-url="[endpoint-url]"</i>. When saving it will send the changed field content (<i>$(field).text()</i>) to the endpoint-url.
 
+</p>
+<p>
+	Initialization of an element will only be executed once.
+</p>
+<p>
+	The second attribute that is mandatory is <i>data-click-edit-focusout-save-url="[endpoint-url]"</i>. When saving it will send the changed field content (<i>$(field).text()</i>) to the endpoint-url.
+</p>
 <h2>Example</h2>
-
-<div data-special-type="click-edit-focusout-save" data-click-edit-focusout-save-url="https://some.endpoint.net/SaveField">Field to change</div>
+<p>
+	<i>&lt;div data-special-type="click-edit-focusout-save" data-click-edit-focusout-save-url="https://some.endpoint.net/SaveField"&gt;Field to change&lt;/div&gt;</i>
+</p>
+<p>
+	<div data-special-type="click-edit-focusout-save" data-click-edit-focusout-save-url="https://some.endpoint.net/SaveField">Field to change</div>
+</p>
 </body>
 </html>
